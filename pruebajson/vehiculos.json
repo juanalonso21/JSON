@@ -1,0 +1,20 @@
+[
+  {
+    "matricula": "43ds",
+    "marca": "Mercedes",
+    "tipo": "Sedan",
+    "km": 50000
+  },
+  {
+    "matricula": "1234AFC",
+    "marca": "Audi",
+    "tipo": "A4",
+    "km": 100000
+  },
+  {
+    "matricula": "54d",
+    "marca": "Seat",
+    "tipo": "Cordoba",
+    "km": 543534
+  }
+]

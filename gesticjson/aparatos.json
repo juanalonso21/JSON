@@ -1,0 +1,12 @@
+[
+  { "codigo": "PRA7", "nombre": "Proyector", "aula": "A7" },
+  { "codigo": "PIZA7", "nombre": "Pizarra Digital", "aula": "A7" },
+  { "codigo": "ORA7", "nombre": "Ordenador", "aula": "A7" },
+  { "codigo": "ORA8", "nombre": "Ordenador", "aula": "A8" },
+  { "codigo": "PRA8", "nombre": "Proyector", "aula": "A8" },
+  { "codigo": "PRA9", "nombre": "Proyector", "aula": "A9" },
+  { "codigo": "PIZA9", "nombre": "Pizarra Digital", "aula": "A9" },
+  { "codigo": "ORA9", "nombre": "Ordenador", "aula": "A9" }
+]
+
+  

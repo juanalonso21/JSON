@@ -1,0 +1,7 @@
+[
+  { "id": "123A", "nombre": "Ana", "departamento": "MAT" },
+  { "id": "123B", "nombre": "Antonio", "departamento": "TEC" },
+  { "id": "123C", "nombre": "Maria", "departamento": "EFI" },
+  { "id": "123D", "nombre": "Juan", "departamento": "MAT" },
+  { "id": "123E", "nombre": "Claudia", "departamento": "TIC" }
+]
