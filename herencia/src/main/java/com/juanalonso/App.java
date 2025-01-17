@@ -1,17 +1,14 @@
 package com.juanalonso;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 import com.google.gson.Gson;
-import com.google.gson.reflect.*; //pruena typetoken
 import com.google.gson.GsonBuilder;
-
+import com.google.gson.reflect.TypeToken;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.FileReader;
 import java.lang.reflect.Type;
-
-import com.google.gson.reflect.TypeToken;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 public class App { //esta clase administra EMPLEADO CONTABLE Y DIRECTOR
     //Voy a utiliza instanceof para saber cual es la clase , por ejemplo busco un empleado y se si es un contable o un director 
     private static ArrayList<Empleado> LEmpleados = new ArrayList<Empleado>();
@@ -127,21 +124,22 @@ public class App { //esta clase administra EMPLEADO CONTABLE Y DIRECTOR
                 }
             }
             public static void cargarEmpleados() {
-                Type type = new TypeToken<ArrayList<Empleado>>(){}.getType();
-                try (FileReader reader = new FileReader("empleados.json")) {
-                    Gson gson = new Gson();
-                    ArrayList<Empleado> empleadosCargados = gson.fromJson(reader, type);
-                    for (Empleado e : empleadosCargados) {
-                        if (e instanceof Contable) {
-                            LContables.add((Contable) e);
-                        } else if (e instanceof Director) {
-                            LDirectores.add((Director) e);
-                        }
-                        LEmpleados.add(e);
-                    }
-                } catch (IOException e) {
-                    System.out.println("No se ha podido leer el archivo");
+                        try (FileReader reader = new FileReader("empleados.json")) {
+            Gson gson = new GsonBuilder().registerTypeAdapter(Empleado.class, new EmpleadoDeserializer()).create();
+            Type listType = new TypeToken<ArrayList<Empleado>>() {}.getTipo();
+            List<Empleado> empleadosCargados = gson.fromJson(reader, listType);
+
+            for (Empleado e : empleadosCargados) {
+                LEmpleados.add(e);
+                if (e instanceof Contable) {
+                    LContables.add((Contable) e);
+                } else if (e instanceof Director) {
+                    LDirectores.add((Director) e);
                 }
+            }
+        } catch (IOException e) {
+            System.out.println("No se ha podido leer el archivo");
+        }
             }
             
             // public static void administrarEmpleado() {

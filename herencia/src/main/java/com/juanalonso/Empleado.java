@@ -8,6 +8,7 @@ public class Empleado {
     private double salarioBase = 1000;
     private int horasExtras;
     private double precioHoraExtra = 10;
+    private String tipo;
     public Empleado() {
         pedirDatos();
     }
@@ -16,6 +17,12 @@ public class Empleado {
         setNombre(nombre);
         setEmail("example@example.com");
         setHorasExtras(horasExtras);
+    }
+    public String getTipo() {
+        return tipo;
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
     public String getDNI() {
         return DNI;

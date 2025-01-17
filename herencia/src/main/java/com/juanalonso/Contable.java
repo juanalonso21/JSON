@@ -12,6 +12,7 @@ public class Contable extends Empleado {
         super();
         setPrecioHoraExtra(10);
         setSalarioBase(getSalarioBase()+plusSalario);
+        setTipo("Contable");
     }
 
     public double getPlusSalario() {

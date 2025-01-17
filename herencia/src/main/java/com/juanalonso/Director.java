@@ -15,6 +15,7 @@ public class Director extends Empleado{
         pedirDatosDirector();
         setPrecioHoraExtra(20);
         setSalarioBase(getSalarioBase()+plusSalario);
+        setTipo("Director");
     }
     
     //PRINCIPIO DE METODOS SETTERS Y GETTERS
