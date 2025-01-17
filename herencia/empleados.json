@@ -1,0 +1,19 @@
+[
+  {
+    "plusSalario": 200.0,
+    "DNI": "FDA1",
+    "nombre": "Juan",
+    "salarioBase": 1200.0,
+    "horasExtras": 12,
+    "precioHoraExtra": 10.0
+  },
+  {
+    "numeroDespacho": 4,
+    "plusSalario": 400.0,
+    "DNI": "123s",
+    "nombre": "PEPE",
+    "salarioBase": 1400.0,
+    "horasExtras": 32,
+    "precioHoraExtra": 20.0
+  }
+]
